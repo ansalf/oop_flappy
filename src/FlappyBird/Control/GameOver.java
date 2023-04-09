@@ -120,16 +120,16 @@ public class GameOver extends JFrame implements ActionListener {
             InputStream stream = ClassLoader.getSystemClassLoader()
                     .getResourceAsStream("resources/DJB Ransom Note.ttf");
             Font font;
-            g.setColor((Color.BLACK));
+            g.setColor((Color.WHITE));
             font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(98f);
             g.setFont(font);
 
             g.drawString("Game Over", frameWidth / 3 - font.getSize(), font.getSize() * 2);
-            g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
-            g.drawString("Game Over", frameWidth / 4, 150);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, 70));
+            g.drawString("Game Over", frameWidth / 4, 70);
         } catch (Exception e) {
-            g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
-            g.drawString("Game Over", frameWidth / 2, 100);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, 70));
+            g.drawString("Game Over", frameWidth / 2, 120);
 
         }
 
