@@ -49,10 +49,6 @@ public class Welcome{
         // draw the selected bird
         g.drawImage(p, frameWidth / 2 - imgTitle[index].getWidth() / 2 + buttonSize * 1 / 4, frameHeight - buttonSize * 2 + buttonSize / 4, birdWidth, birdHeight,null);
 
-        // this part is shown to choose the button:
-        // 1. if you choose buttonOne: to select bird (in case you have unclocked that bird)
-        // 2. if you choose buttonTwo: to play the game 
-        // 3. if you choose buttonThree: to get to the leaderboard
         if(buttonChoose == buttonOne && index % 5 != 0) {
             g.drawImage(button[3], frameWidth / 2 - imgTitle[index].getWidth() / 2, frameHeight - buttonSize * 2 - buttonSize / 2, buttonSize, buttonSize, null);
             g.drawImage(button[4], frameWidth / 2 - imgTitle[index].getWidth() / 2, frameHeight - buttonSize * 2 + buttonSize / 2 , buttonSize, buttonSize, null);

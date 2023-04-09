@@ -21,19 +21,6 @@ public class PipeTest {
         Ylocation = ylocation;
     }
 
-
-//    // Initialize a void data type setImage function with the input parameter image, width, height type int
-//    public void setImage(BufferedImage image) {
-//        this.image = image;
-//        this.width = image.getWidth();
-//        this.height = image.getHeight();
-//    }
-
-//  // Add velocity
-//    public void addVelocity(double x, double y) {
-//        this.Xvelocity += x;
-//        this.Yvelocity += y;
-//    }
     public  int getWidth()
     {
         return   65;
@@ -61,19 +48,4 @@ public int getX() {
         Xlocation = xlocation;
         Ylocation = ylocation;
     }
-
-    //  // Make boundary
-//    public Rectangle2D getBoundary() {
-//        return new Rectangle2D(X1, Y1, X2, Y2);
-//    }
-//
-//    public boolean intersectsPipeTest(PipeTest s) {
-//        return s.getBoundary().intersects(this.getBoundary());
-//    }
-//
-//  // Update position by formula: velocity * time
-//    public void update(double time) {
-//        Xposition += Xvelocity * time;
-//        Yposition += Yvelocity * time;
-//    }
 }

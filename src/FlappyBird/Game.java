@@ -123,9 +123,6 @@ public class Game extends Frame implements KeyListener {
             bird.drawDie(bufG);
             gameOver.draw(bufG);
         }
-//        bufG.setColor(Color.RED);
-//        bufG.drawLine(0,400,frameWidth, 400);
-
 
         g.drawImage(bufImg, 0, 0, null);
     }
@@ -193,10 +190,6 @@ public class Game extends Frame implements KeyListener {
                 break;
         }
     }
-    /**
-     * When the space button is released,
-     * the state needs to be changed manually
-     */
     @Override
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_SPACE ){
@@ -204,11 +197,8 @@ public class Game extends Frame implements KeyListener {
 
         }
     }
-    /**
-     * When other buttons are pressed,no action happens
-     */
+
     @Override
     public void keyTyped(KeyEvent e) {
-       // System.out.println(e.getKeyChar());
     }
 }

@@ -134,18 +134,6 @@ public class Bird {
             {
                 return true;
             }
-//            if(up.getX() <= x + birdWidth && x + birdWidth <= up.getX() + birdSize * 3 / 2
-//                    && ((up.getY() <= y && y <= up.getY() + birdHeight * 3 / 2)
-//                    || (up.getY() <= y + birdHeight && y + birdHeight <= up.getY() + birdSize * 3 / 2))){
-//
-//                return true;
-//            }
-//            if(down.getX() <= x + birdWidth && x + birdWidth <= down.getX() + birdSize * 3 / 2
-//                    && ((down.getY() <= y && y <= down.getY() + birdHeight * 3 / 2)
-//                    || (down.getY() <= y + birdHeight && y + birdHeight <= down.getY() + birdSize * 3 / 2))){
-//
-//                return true;
-//            }
         }
         return false;
     }
