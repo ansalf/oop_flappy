@@ -21,8 +21,8 @@ public class GameOver extends JFrame implements ActionListener {
     JLabel best;
 
     public void setLabel1(long score) {
-        label1 = new JLabel("You got "+score+ " scores!");
-        Font newLabelFont=new Font(label.getFont().getName(),Font.BOLD,label.getFont().getSize());
+        label1 = new JLabel("You got " + score + " scores!");
+        Font newLabelFont = new Font(label.getFont().getName(), Font.BOLD, label.getFont().getSize());
         label1.setFont(newLabelFont);
         label1.setBounds(130, 80, 200, 20);
         add(label1);
@@ -30,7 +30,7 @@ public class GameOver extends JFrame implements ActionListener {
 
     public void setBest() {
         best = new JLabel("New best!");
-        Font newLabelFont=new Font(label.getFont().getName(),Font.BOLD,label.getFont().getSize());
+        Font newLabelFont = new Font(label.getFont().getName(), Font.BOLD, label.getFont().getSize());
         best.setFont(newLabelFont);
         best.setForeground(Color.WHITE);
         best.setBounds(20, 80, 100, 30);
@@ -40,7 +40,7 @@ public class GameOver extends JFrame implements ActionListener {
     public GameOver() {
 
         label = new JLabel("Congratulations!");
-        Font newLabelFont=new Font(label.getFont().getName(),Font.BOLD,label.getFont().getSize());
+        Font newLabelFont = new Font(label.getFont().getName(), Font.BOLD, label.getFont().getSize());
         label.setFont(newLabelFont);
         label.setBounds(5, 50, 100, 20);
         tf = new TextField();
@@ -63,10 +63,9 @@ public class GameOver extends JFrame implements ActionListener {
         setResizable(false);
         setVisible(false);
 
-
         setUndecorated(true);
         getContentPane().setBackground(Color.PINK);
-        //getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+        // getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         MetalLookAndFeel.setCurrentTheme(new MyDefaultMetalTheme());
         try {
             UIManager.setLookAndFeel(new MetalLookAndFeel());
@@ -74,9 +73,7 @@ public class GameOver extends JFrame implements ActionListener {
             e.printStackTrace();
         }
 
-
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -85,9 +82,9 @@ public class GameOver extends JFrame implements ActionListener {
             tf.setText("");
             show(false);
             remove(label1);
-            try{
+            try {
                 remove(best);
-            }catch(Exception ex){
+            } catch (Exception ex) {
 
             }
         }
@@ -97,33 +94,37 @@ public class GameOver extends JFrame implements ActionListener {
     private int x = frameWidth;
 
     public void draw(Graphics g) {
-//        Random rand = new Random();
-//        float red = rand.nextFloat();
-//        float green = rand.nextFloat();
-//        float blue = rand.nextFloat();
-//        Color randomColor = new Color(red, green, blue);
-//        g.setColor(randomColor);
-//        try {
-//            InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream("resources/DJB Ransom Note.ttf");
-//            Font font;
-//                g.setColor((Color.BLACK));
-//                font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(100f);
-//            g.setFont(font);
-//
-//            g.drawString("Game Over", frameWidth / 3 - font.getSize(), font.getSize() * 2);
-//        } catch (Exception e) {
-//            g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
-//            g.drawString("Game Over", frameWidth / 2, 100);
-//
-//        }
+        // Random rand = new Random();
+        // float red = rand.nextFloat();
+        // float green = rand.nextFloat();
+        // float blue = rand.nextFloat();
+        // Color randomColor = new Color(red, green, blue);
+        // g.setColor(randomColor);
+        // try {
+        // InputStream stream =
+        // ClassLoader.getSystemClassLoader().getResourceAsStream("resources/DJB Ransom
+        // Note.ttf");
+        // Font font;
+        // g.setColor((Color.BLACK));
+        // font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(100f);
+        // g.setFont(font);
+        //
+        // g.drawString("Game Over", frameWidth / 3 - font.getSize(), font.getSize() *
+        // 2);
+        // } catch (Exception e) {
+        // g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
+        // g.drawString("Game Over", frameWidth / 2, 100);
+        //
+        // }
         try {
-            InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream("resources/DJB Ransom Note.ttf");
+            InputStream stream = ClassLoader.getSystemClassLoader()
+                    .getResourceAsStream("resources/DJB Ransom Note.ttf");
             Font font;
-                g.setColor((Color.BLACK));
-                font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(98f);
+            g.setColor((Color.BLACK));
+            font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(98f);
             g.setFont(font);
 
-//            g.drawString("Game Over", frameWidth / 3 - font.getSize(), font.getSize() * 2);
+            g.drawString("Game Over", frameWidth / 3 - font.getSize(), font.getSize() * 2);
             g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
             g.drawString("Game Over", frameWidth / 4, 150);
         } catch (Exception e) {
@@ -132,28 +133,31 @@ public class GameOver extends JFrame implements ActionListener {
 
         }
 
+        // try {
+        // String str = "";
+        // g.setColor(Color.WHITE);
+        // InputStream stream =
+        // ClassLoader.getSystemClassLoader().getResourceAsStream("resources/UchronyCube-Bold-FFP.ttf");
+        // Font font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(30f);
+        // g.setFont(font);
+        // g.drawString(str, frameWidth / 4 - font.getSize() * 2, frameHeight -
+        // font.getSize() * 2);
+        // } catch (Exception e) {
+        // }
 
-        //try {
-            //String str = "";
-           //g.setColor(Color.WHITE);
-            //InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream("resources/UchronyCube-Bold-FFP.ttf");
-            //Font font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(30f);
-            //g.setFont(font);
-            //g.drawString(str, frameWidth / 4 - font.getSize() * 2, frameHeight - font.getSize() * 2);
-        //} catch (Exception e) {
-       // }
-
-        //try {
-         //   String str = "";
-           // g.setColor(Color.black);
-           // InputStream stream = ClassLoader.getSystemClassLoader().getResourceAsStream("resources/Wall Notes.otf");
-           // Font font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(30f);
-           // g.setFont(font);
-           // g.drawString(str, x, 55);
-           // x -= SPEED;
-           // if (x < -SPEED * 2) x = frameWidth + SPEED;
-        //} catch (Exception e) {
-        //}
+        // try {
+        // String str = "";
+        // g.setColor(Color.black);
+        // InputStream stream =
+        // ClassLoader.getSystemClassLoader().getResourceAsStream("resources/Wall
+        // Notes.otf");
+        // Font font = Font.createFont(Font.TRUETYPE_FONT, stream).deriveFont(30f);
+        // g.setFont(font);
+        // g.drawString(str, x, 55);
+        // x -= SPEED;
+        // if (x < -SPEED * 2) x = frameWidth + SPEED;
+        // } catch (Exception e) {
+        // }
         i = !i;
     }
 
@@ -190,5 +194,5 @@ public class GameOver extends JFrame implements ActionListener {
             return new ColorUIResource(Color.orange);
         }
     }
-//    http://www.java2s.com/Tutorials/Java/Swing_How_to/JFrame/Change_the_color_of_titlebar_in_JFrame.htm
+    // http://www.java2s.com/Tutorials/Java/Swing_How_to/JFrame/Change_the_color_of_titlebar_in_JFrame.htm
 }
